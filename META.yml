@@ -1,0 +1,23 @@
+---
+abstract: 'Lexically scoped sanctification of %ENV'
+author:
+  - 'Chris Williams <chris@bingosnet.co.uk>'
+build_requires:
+  Test::More: 0.47
+distribution_type: module
+generated_by: 'Module::Install version 0.79'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Env-Sanctify
+no_index:
+  directory:
+    - examples
+    - inc
+    - t
+requires:
+  perl: 5.6.0
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.02
