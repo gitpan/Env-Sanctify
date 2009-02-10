@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use vars qw($VERSION);
 
-$VERSION = '0.02';
+$VERSION = '0.04';
 
 sub sanctify {
   my $package = shift;
@@ -22,7 +22,7 @@ sub _sanctify {
   $self->{_backup} = { };
   if ( $self->{sanctify} ) {
      foreach my $regex ( @{ $self->{sanctify} } ) { 
-	$self->{_backup}->{$_} = delete $ENV{$_} for grep { eval " /$regex/ " } keys %ENV;
+	$self->{_backup}->{$_} = delete $ENV{$_} for grep { eval { /$regex/ } } keys %ENV;
      }
   }
   if ( $self->{env} ) {
