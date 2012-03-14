@@ -1,16 +1,33 @@
-Env::Sanctify
-=============
+==============================
+2012-03-14 22:07:07 +0000 1.06
+==============================
 
-1.04	Mon May 18 10:28:20 BST 2009
-	- Added auto_provides, auto_license and githubmeta to Makefile.PL
+  commit ee2d9ee941377d01f062aed8f1b4e44595c786b8
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date:   Wed Mar 14 22:07:07 2012 +0000
+  
+    Convert distribution to dzil using dzooky 
 
-1.02	Tue Apr  7 21:40:42 BST 2009
-	- Make auto_set_repository() only run at author-time
+==============================
+2009-05-18 10:29:26 +0100 1.04
+==============================
 
-1.00	Mon Apr  6 09:18:45 BST 2009
-	- Bumped the version number to a 'stable' release.
-	- added auto setting of repository to META.yml
-	- Added a zap %ENV test
+  commit aaeaca69932d386a86dbb03b8f4fa9f6220af128
+  Author: Chris Williams <chris@bingosnet.co.uk>
+  Date:   Mon May 18 10:29:26 2009 +0100
+  
+    Added auto_provides, auto_license and githubmeta to Makefile.PL 
 
-0.04	Tue Feb 10 12:02:14 GMT 2009
-	- Fixed the regex sanctification and updated the tests to check this
+==============================
+2009-04-07 21:42:15 +0100 1.02
+==============================
+
+  commit 3662635f1d8df49dd9f824b2553377b7dfe01beb
+  Author: Chris Williams <chris@bingosnet.co.uk>
+  Date:   Tue Apr 7 21:42:15 2009 +0100
+  
+    Make auto_set_repository() only run at author-time 
+
+====================================
+End of changes in the last 1825 days
+====================================

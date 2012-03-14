@@ -1,10 +1,12 @@
 package Env::Sanctify;
+{
+  $Env::Sanctify::VERSION = '1.06';
+}
+
+#ABSTRACT: Lexically scoped sanctification of %ENV
 
 use strict;
 use warnings;
-use vars qw($VERSION);
-
-$VERSION = '1.04';
 
 sub sanctify {
   my $package = shift;
@@ -21,7 +23,7 @@ sub _sanctify {
   my $self = shift;
   $self->{_backup} = { };
   if ( $self->{sanctify} ) {
-     foreach my $regex ( @{ $self->{sanctify} } ) { 
+     foreach my $regex ( @{ $self->{sanctify} } ) {
 	$self->{_backup}->{$_} = delete $ENV{$_} for grep { eval { /$regex/ } } keys %ENV;
      }
   }
@@ -45,11 +47,18 @@ sub DESTROY {
 }
 
 'Sanctify yourself, set yourself free';
+
+
 __END__
+=pod
 
 =head1 NAME
 
 Env::Sanctify - Lexically scoped sanctification of %ENV
+
+=head1 VERSION
+
+version 1.06
 
 =head1 SYNOPSIS
 
@@ -59,7 +68,7 @@ Env::Sanctify - Lexically scoped sanctification of %ENV
 
   $sanctify->restore
 
-  { 
+  {
 
     my $sanctify = Env::Sanctify->sanctify( env => { POE_TRACE_DEFAULT => 1 } );
 
@@ -70,13 +79,13 @@ Env::Sanctify - Lexically scoped sanctification of %ENV
 
 =head1 DESCRIPTION
 
-Env::Sanctify is a module that provides lexically scoped manipulation and sanctification of 
+Env::Sanctify is a module that provides lexically scoped manipulation and sanctification of
 C<%ENV>.
 
 You can specify that it alter or add additional environment variables or remove existing ones
 according to a list of matching regexen.
 
-You can then either C<restore> the environment back manually or let the object fall out of 
+You can then either C<restore> the environment back manually or let the object fall out of
 scope, which automagically restores.
 
 Useful for manipulating the environment that forked processes and sub-processes will inherit.
@@ -102,19 +111,21 @@ Any C<%ENV> var that matches a C<sanctify> regex is removed from the resultant C
 
 =item C<restore>
 
-Explicitly restore the previous C<%ENV>. This is called automagically when the object is C<DESTROY>ed, 
+Explicitly restore the previous C<%ENV>. This is called automagically when the object is C<DESTROY>ed,
 for instance, when it goes out of scope.
 
 =back
 
 =head1 AUTHOR
 
-Chris C<BinGOs> Williams <chris@bingosnet.co.uk>
+Chris Williams <chris@bingosnet.co.uk>
 
-=head1 LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-Copyright E<copy> Chris Williams
+This software is copyright (c) 2012 by Chris Williams.
 
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
+

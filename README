@@ -1,6 +1,9 @@
 NAME
     Env::Sanctify - Lexically scoped sanctification of %ENV
 
+VERSION
+    version 1.06
+
 SYNOPSIS
       my $sanctify = Env::Sanctify->sanctify( sanctify => [ '^POE' ] );
 
@@ -8,7 +11,7 @@ SYNOPSIS
 
       $sanctify->restore
 
-      { 
+      {
 
         my $sanctify = Env::Sanctify->sanctify( env => { POE_TRACE_DEFAULT => 1 } );
 
@@ -47,12 +50,11 @@ METHODs
         scope.
 
 AUTHOR
-    Chris "BinGOs" Williams <chris@bingosnet.co.uk>
+    Chris Williams <chris@bingosnet.co.uk>
 
-LICENSE
-    Copyright © Chris Williams
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2012 by Chris Williams.
 
-    This module may be used, modified, and distributed under the same terms
-    as Perl itself. Please see the license that came with your Perl
-    distribution for details.
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
 
