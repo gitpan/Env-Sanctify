@@ -3,11 +3,13 @@ abstract: 'Lexically scoped sanctification of %ENV'
 author:
   - 'Chris Williams <chris@bingosnet.co.uk>'
 build_requires:
+  IO::Handle: 0
+  IPC::Open3: 0
   Test::More: 0.47
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300009, CPAN::Meta::Converter version 2.120630'
+generated_by: 'Dist::Zilla version 4.300037, CPAN::Meta::Converter version 2.132140'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -18,4 +20,4 @@ requires:
 resources:
   homepage: https://github.com/bingos/env-sanctify
   repository: https://github.com/bingos/env-sanctify.git
-version: 1.06
+version: 1.08

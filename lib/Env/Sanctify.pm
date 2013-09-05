@@ -1,6 +1,6 @@
 package Env::Sanctify;
 {
-  $Env::Sanctify::VERSION = '1.06';
+  $Env::Sanctify::VERSION = '1.08';
 }
 
 #ABSTRACT: Lexically scoped sanctification of %ENV
@@ -48,8 +48,8 @@ sub DESTROY {
 
 'Sanctify yourself, set yourself free';
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -58,7 +58,7 @@ Env::Sanctify - Lexically scoped sanctification of %ENV
 
 =head1 VERSION
 
-version 1.06
+version 1.08
 
 =head1 SYNOPSIS
 
@@ -116,16 +116,39 @@ for instance, when it goes out of scope.
 
 =back
 
+=head1 CAVEATS
+
+It has been reported that redefining the Env::Sanctify object causes unexpected behaviour.
+
+  use strict;
+  use warnings;
+
+  use Env::Sanctify;
+
+  $ENV{TEST} = 'Test thing';
+
+  my $sanctify = Env::Sanctify->sanctify( sanctify => [ 'TEST' ] );
+
+  printf "My ENV{TEST}: %s\n", $ENV{TEST};
+
+  $sanctify = Env::Sanctify->sanctify( env => { TEST => 'Other answer' } );
+
+  printf "My ENV{TEST}: %s\n", $ENV{TEST};
+
+This script outputs:
+
+  My ENV{TEST}:
+  My ENV{TEST}: Test thing
+
 =head1 AUTHOR
 
 Chris Williams <chris@bingosnet.co.uk>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Chris Williams.
+This software is copyright (c) 2013 by Chris Williams.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

@@ -1,33 +1,64 @@
-==============================
-2012-03-14 22:07:07 +0000 1.06
-==============================
+==================================================
+Changes from 2008-09-06 00:00:00 +0000 to present.
+==================================================
 
-  commit ee2d9ee941377d01f062aed8f1b4e44595c786b8
+-----------------------------------------
+version 1.08 at 2013-09-05 19:20:11 +0000
+-----------------------------------------
+
+  Change: ee14d7170b6af297b71b51a2740a0d2b8b6eb52d
   Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
-  Date:   Wed Mar 14 22:07:07 2012 +0000
-  
+  Date : 2013-09-05 20:20:11 +0000
+
+    RT#46929 Document caveats about redefining the sanctify object 
+
+-----------------------------------------
+version 1.06 at 2012-03-14 22:07:07 +0000
+-----------------------------------------
+
+  Change: ee2d9ee941377d01f062aed8f1b4e44595c786b8
+  Author: Chris 'BinGOs' Williams <chris@bingosnet.co.uk>
+  Date : 2012-03-14 22:07:07 +0000
+
     Convert distribution to dzil using dzooky 
 
-==============================
-2009-05-18 10:29:26 +0100 1.04
-==============================
+-----------------------------------------
+version 1.04 at 2009-05-18 09:29:26 +0000
+-----------------------------------------
 
-  commit aaeaca69932d386a86dbb03b8f4fa9f6220af128
+  Change: aaeaca69932d386a86dbb03b8f4fa9f6220af128
   Author: Chris Williams <chris@bingosnet.co.uk>
-  Date:   Mon May 18 10:29:26 2009 +0100
-  
+  Date : 2009-05-18 10:29:26 +0000
+
     Added auto_provides, auto_license and githubmeta to Makefile.PL 
 
-==============================
-2009-04-07 21:42:15 +0100 1.02
-==============================
+-----------------------------------------
+version 1.02 at 2009-04-07 20:42:15 +0000
+-----------------------------------------
 
-  commit 3662635f1d8df49dd9f824b2553377b7dfe01beb
+  Change: 3662635f1d8df49dd9f824b2553377b7dfe01beb
   Author: Chris Williams <chris@bingosnet.co.uk>
-  Date:   Tue Apr 7 21:42:15 2009 +0100
-  
+  Date : 2009-04-07 21:42:15 +0000
+
     Make auto_set_repository() only run at author-time 
 
-====================================
-End of changes in the last 1825 days
-====================================
+-----------------------------------------
+version 1.00 at 2009-04-06 08:26:42 +0000
+-----------------------------------------
+
+  Change: e6930b9391f091873e1038d8988aa833bcf9bda7
+  Author: Chris Williams <chris@bingosnet.co.uk>
+  Date : 2009-04-06 09:26:42 +0000
+
+    Bump to a 'stable' version release. Added repository auto-setting to
+    META.yml. Added a zap %ENV test 
+
+  Change: 30cbe06480b5add2eeb79fd46fd6ca00db6cdb6e
+  Author: Chris Williams <chris@bingosnet.co.uk>
+  Date : 2009-03-13 09:25:58 +0000
+
+    Initial git commit 
+
+================
+End of releases.
+================
