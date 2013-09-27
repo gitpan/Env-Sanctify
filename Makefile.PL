@@ -23,11 +23,12 @@ my %WriteMakefileArgs = (
   "NAME" => "Env::Sanctify",
   "PREREQ_PM" => {},
   "TEST_REQUIRES" => {
+    "File::Spec" => 0,
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "1.08",
+  "VERSION" => "1.10",
   "test" => {
     "TESTS" => "t/*.t"
   }

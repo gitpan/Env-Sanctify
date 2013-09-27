@@ -2,7 +2,7 @@ NAME
     Env::Sanctify - Lexically scoped sanctification of %ENV
 
 VERSION
-    version 1.08
+    version 1.10
 
 SYNOPSIS
       my $sanctify = Env::Sanctify->sanctify( sanctify => [ '^POE' ] );

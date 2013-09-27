@@ -1,6 +1,6 @@
 package Env::Sanctify;
 {
-  $Env::Sanctify::VERSION = '1.08';
+  $Env::Sanctify::VERSION = '1.10';
 }
 
 #ABSTRACT: Lexically scoped sanctification of %ENV
@@ -58,7 +58,7 @@ Env::Sanctify - Lexically scoped sanctification of %ENV
 
 =head1 VERSION
 
-version 1.08
+version 1.10
 
 =head1 SYNOPSIS
 
